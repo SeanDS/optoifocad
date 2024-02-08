@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=45", "setuptools_scm>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "optoifocad"
+description = "An Optocad to Ifocad input file converter utility"
+readme = "README.md"
+authors = [
+  { name = "Sean Leavey", email = "sean.leavey@stfc.ac.uk" },
+]
+license = { text = "GPL-3.0-or-later" }
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+  "Natural Language :: English",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Astronomy",
+  "Topic :: Scientific/Engineering :: Physics",
+]
+
+# requirements
+requires-python = ">=3.8"
+dependencies = []
+
+dynamic = [
+  "version",
+]
+
+[project.optional-dependencies]
+dev = []
+
+[tool.setuptools_scm]
+write_to = "optoifocad/_version.py"
+
+[tool.doc8]
+# Documentation line length consistent with Black, and roughly maximum to avoid
+# horizontal scrollbars appearing in code/preformatted blocks.
+max-line-length = 88
